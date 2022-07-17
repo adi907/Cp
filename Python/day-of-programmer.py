@@ -1,4 +1,6 @@
-```
+#The %s operator lets you add a value into a Python string. The %s signifies that you want to add a string value into a string. Here %s signifies the part where the 
+#string needs to add a variable value. And the variable is specified after the inverted commas as %year
+
 def dayOfProgrammer(year):
     if year<1918:
         if year%4==0:
@@ -14,5 +16,3 @@ def dayOfProgrammer(year):
             return '12.09.%s' %year
         else:
             return '13.09.%s' %year
-```
- #The %s operator lets you add a value into a Python string. The %s signifies that you want to add a string value into a string. Here %s signifies the part where the string needs to add a variable value. And the variable is specified after the inverted commas as %year
