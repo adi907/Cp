@@ -1,4 +1,4 @@
-// Approach: Do merge sort, but while merging whenver you need to place element of 2nd split array into main array, increase the count with all numbers left in 1st split array
+// Approach: Do merge sort manually, but while merging whenver you need to place element of 2nd split array into main array, increase the count with all numbers left in 1st split array
 // Time complexity: O(NlogN); Space complexity: O(N)
 // Problem: Modifies the input array(can take another dummy array to store actual values-> increase space complexity to O(2N))
 
