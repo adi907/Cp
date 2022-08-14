@@ -2,31 +2,20 @@
 // Time complexity: O(N!*N)
 
 
-// Not allowed approach by using in-built c++ function
+// Optimal approach(Not allowed): By using in-built c++ function
 
 // #include<bits/stdc++.h>
 // using namespace std;
 
-// int main() {
-//     // int arr[] = {1,3,2};
-//     vector<int> vec={1,2,4,3};
-//     int n=vec.size();
-//     int* arr=new int[n];
+int main() {
+    vector<int> vec={1,2,4,3};
+   
+    next_permutation(vec.begin(),vec.end());
 
-//     for(int i=0;i<n;i++){
-//         arr[i]=vec[i];
-//     }
-    
-//     next_permutation(arr,arr+n);
-//     for(int i=0;i<n;i++){
-//         vec[i]=arr[i];
-//     }
-
-//     for(int i=0;i<n;i++){
-//         cout<<vec[i];
-//     }  
-// return 0;
-// }
+    for(int i=0;i<n;i++){
+        cout<<vec[i];
+    }  
+}
 
 // Optimised approach: Iterate array from back. Find i1: arr[i1]<arr[i1+1]; find i2 from right where arr[i2]>arr[i1]; swap i1 & i2; reverse all elements to right of i1.{see intuition behind this approach on Yt}{take care of edge case when already biggest permutation given; return the smallest}
 // Time complexity: O(N+N+N); Space complexity: O(1)
@@ -73,8 +62,7 @@ int main(){
         arr[ind2]=temp;
 
         int num_ele=n-(ind1+1);
-        // cout<<ind1+1;
-        // cout<<ind1+1+(n-(ind1+1))/2;
+
         for(int i=ind1+1,j=0;i<ind1+1+((n-ind1)/2);i++,j++){
             int temp1=arr[i];
             // cout<<temp1;
