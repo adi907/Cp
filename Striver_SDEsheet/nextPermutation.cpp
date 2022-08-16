@@ -12,7 +12,7 @@ int main() {
    
     next_permutation(vec.begin(),vec.end());
 
-    for(int i=0;i<n;i++){
+    for(int i=0;i<vec.size();i++){
         cout<<vec[i];
     }  
 }
