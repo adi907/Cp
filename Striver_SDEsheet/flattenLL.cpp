@@ -1,5 +1,5 @@
-// Appraoch: Recurse until the head pointer moves null. Merge sort each list from the last.
-// Time complexity: ;Space complexity:O()
+// Approach: Recurse until the head pointer moves null. Merge sort each list from the last.
+// Time complexity: O(N) ;Space complexity:O(1)
 
 #include<bits/stdc++.h>
 using namespace std;
