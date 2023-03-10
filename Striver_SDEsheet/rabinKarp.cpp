@@ -1,4 +1,4 @@
-// Approach: If key string smaller make it equal to other string. Then apply Rolling hash(rabin karp) and check if substring present. Do this 3 times each time incrementing key string(2times for front and end increment and 1 time to counter incase of ratio in float increments string 1 less time){also see notebook}
+// Approach: If key string smaller make it equal/larger to other string. Then apply Rolling hash(rabin karp) and check if substring present. Do this 2 times. If not present increment string by 1more of original(check for start & end adjustment){also see notebook}
 // Time complexity: avg=O(N+M) , best=O(NM)  ;Space complexity: O(max(N,M))
 
 #include<bits/stdc++.h>
@@ -79,19 +79,18 @@ return false;
 
 int repeatedStringMatch(string a, string b) {
     if(b.size()==0){
-        return 0;
+        return 0; // a has to be used 0 times to get b="" as substring
     }
     
-    int ratio=(b.size()/a.size());
     string anew="";
     int cnt=0;
 
-    for(int i=0;i<ratio;i++){
+    while(anew.size()<b.size()){ // keep doing until size of a is smaller than b(as b cant be substring till that point)
         anew+=a;
         cnt++;
     }
 
-    for(int i=0;i<3;i++){
+    for(int i=0;i<2;i++){ // do check 2 times(1 for start & 1 for end adjustment like if substring starts 1 awayjust from start/end etc)
         if(rollingHash(anew,b)){
             return cnt;
         }else{
