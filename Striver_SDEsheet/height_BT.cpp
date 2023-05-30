@@ -1,7 +1,10 @@
+// Approach:height=1+max(lheight,rheight)
+// Time complexity:O(N) ; Space complexity:O(H)
+
 #include<bits/stdc++.h>
 using namespace std;
 
-struct TreeNode {
+struct TreeNode{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -10,8 +13,6 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-// Approach:height=1+max(lheight,rheight)
-// Time complexity:O(N) ; Space complexity:O(H)
 int maxDepth(TreeNode* root) {
     if(root==NULL){
         return 0;
