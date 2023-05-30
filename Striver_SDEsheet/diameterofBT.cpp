@@ -54,8 +54,7 @@ int height(TreeNode *root, int &diameter){
     return 1 + max(lh, rh);
 }
 
-int diameterOfBinaryTree(TreeNode *root)
-{
+int diameterOfBinaryTree(TreeNode *root){
     int diameter = 0;
     int k = height(root, diameter);
     return diameter;

@@ -11,10 +11,10 @@ struct TreeNode {
 };
 
 // Approach:height=1+max(lheight,rheight)
-// Time complexity: ; Space complexity:
+// Time complexity:O(N) ; Space complexity:O(H)
 int maxDepth(TreeNode* root) {
-        if(root==NULL){
-            return 0;
-        }
-        return 1+max(maxDepth(root->left),maxDepth(root->right));
+    if(root==NULL){
+        return 0;
     }
+return 1+max(maxDepth(root->left),maxDepth(root->right));
+}

@@ -11,7 +11,7 @@ struct TreeNode {
 };
 
 // Approach: Check your own value with other roots val. Compare left & right children. Also take care of NULL nodes occurence
-// Time complexity: ; Space complexity:
+// Time complexity:O(N) ; Space complexity:O(H)
 
 bool isSameTree(TreeNode* p, TreeNode* q) {
     if(p==NULL && q==NULL){

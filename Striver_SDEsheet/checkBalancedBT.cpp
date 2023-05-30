@@ -34,7 +34,7 @@ bool isBalanced(TreeNode* root) {
 }
 
 // Optimal approach: Instead of checking each node. Find left and right height. If any of these -1(due to imbalance within them), directly return -1. Else check on itselft whether balanced and return its height(1+max(lh,rh))
-// Time complexity:O(N) ; Space complexity:
+// Time complexity:O(N) ; Space complexity:O(H)
 int check(TreeNode* root){
     if(root==NULL){
         return 0;
