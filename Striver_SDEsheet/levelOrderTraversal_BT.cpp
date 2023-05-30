@@ -1,5 +1,5 @@
-// Approach: 
-// Time complexity: O() ; Space complexity: O()
+// Approach: Keep a queue to store node. Each time take a node. Store its value.Pop it. Push its children to the queue
+// Time complexity: O(N) ; Space complexity: O(H)
 
 #include<bits/stdc++.h>
 using namespace std;

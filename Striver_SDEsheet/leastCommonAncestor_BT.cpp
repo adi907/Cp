@@ -1,3 +1,6 @@
+// Approach: Check in the left & right nodes for matching values of p,q and maintain count of matched values. Now compare yourself with the value of p and q. If same increment count and check if this count is equal to total nodes. If yes, you are the common ancestor
+// Time complexity:O(N) ; Space complexity:O(N)
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,8 +14,6 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-// Approach: Check in the left & right nodes for matching values of p,q and maintain count of matched values. Now compare yourself with the value of p and q. If same increment count and check if this count is equal to total nodes. If yes, you are the common ancestor
-// Time complexity:O(N) ; Space complexity:O(N)
 
 int helper(TreeNode *root, TreeNode *p, TreeNode *q, int match, TreeNode *&ans){
     if (root == NULL){
