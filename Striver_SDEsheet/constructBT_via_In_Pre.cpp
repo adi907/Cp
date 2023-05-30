@@ -1,8 +1,10 @@
+// Approach: Preorder's first element is root. Find this root in inorder. Create the rootnode. All values left of root are in leftTree & all at right in rightTree. Using this info. find Left side's inorder start/end,preorder start/end. Similarly do for right side. Send recursive calls to left & right side until inorder's Start< inorder's End
+// Time complexity:O(NlogN) ; Space complexity:O(N)
+
 #include <bits/stdc++.h>
 using namespace std;
 
-struct TreeNode
-{
+struct TreeNode{
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -11,21 +13,17 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-// Approach: Preorder's first element is root. Find this root in inorder. Create the rootnode. All values left of root are in leftTree & all at right in rightTree. Using this info. find Left side's inorder start/end,preorder start/end. Similarly do for right side. Send recursive calls to left & right side until inorder's Start< inorder's End
-// Time complexity:O(NlogN) ; Space complexity:O(N)
 
-TreeNode *helper(vector<int> preorder, vector<int> inorder, int preS, int preE, int inS, int inE)
-{
-    if (inS > inE)
-    {
+TreeNode *helper(vector<int> preorder, vector<int> inorder, int preS, int preE, int inS, int inE){
+    if (inS > inE){
         return NULL;
     }
+
     int rootData = preorder[preS];
     int rootIndex = -1;
-    for (int i = 0; i < inorder.size(); i++)
-    {
-        if (inorder[i] == rootData)
-        {
+
+    for (int i = 0; i < inorder.size(); i++){
+        if (inorder[i] == rootData){
             rootIndex = i;
             break;
         }
@@ -47,8 +45,7 @@ TreeNode *helper(vector<int> preorder, vector<int> inorder, int preS, int preE, 
     return root;
 }
 
-TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder)
-{
+TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder){
     int n = preorder.size();
     return helper(preorder, inorder, 0, n - 1, 0, n - 1);
 }

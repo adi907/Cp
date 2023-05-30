@@ -1,3 +1,5 @@
+// Approach-I: Traverse right then left to end. Keep a global variable previous(initially at NULL). Make root's left=NULL and right equal to previous element and keep updating previous element
+// Time complexity: O(N); Space complexity:O(N)
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -10,10 +12,8 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-TreeNode* previous=NULL;
 
-// Approach-I: Traverse right then left to end. Keep a global variable previous(initially at NULL). Make root's left=NULL and right equal to previous element and keep updating previous element
-// Time complexity: O(N); Space complexity:O(N)
+TreeNode* previous=NULL;
 void flatten1(TreeNode* root){
     if(root==NULL){
         return;
@@ -82,15 +82,4 @@ void flatten3(TreeNode* root){
         }
     }
 
-}
-
-int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt","r",stdin);
-        freopen("output.txt","w",stdout);
-    #endif
-
-
-    
-return 0;
 }

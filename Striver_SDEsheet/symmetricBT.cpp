@@ -1,3 +1,6 @@
+// Approach: Compare a node value with other side node and then send recursive call of (right child,left child),(left child,right child) to find symmetricity
+// Time complexity:O(N) ; Space complexity:O(H)
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -10,8 +13,6 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-// Approach: Compare a node value with other side node and then send recursive call of (right child,left child),(left child,right child) to find symmetricity
-// Time complexity: ; Space complexity:
 
 bool helper(TreeNode* r1,TreeNode* r2){
     if(!r1 && !r2){
