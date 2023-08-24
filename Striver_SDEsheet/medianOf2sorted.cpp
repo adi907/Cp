@@ -36,7 +36,7 @@ double median(vector<int> a, vector<int> b){
             }else{
                 return max(l1,l2);
             }
-        }else if(l1>l2){
+        }else if(l1>r2){
             high=cut1-1;//reduce no. of elements taken from 1st array
         }else{
             low=cut1+1;//increases no. of elements taken from 1st array
